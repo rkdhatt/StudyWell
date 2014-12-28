@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="horizontal"
+    style="@style/style_entity"
+    android:textColor="#ffffff">
+
+    <TextView
+        android:id="@+id/task_weightedit"
+        android:layout_width="40dp"
+        android:layout_height="fill_parent"
+        android:clickable="false"
+        android:focusable="false"
+        android:gravity="center"
+        android:hint="Weight (%)" 
+         android:textColor="#ffffff"/>
+    
+    <TextView
+        android:id="@+id/weight_perc"
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:clickable="false"
+        android:focusable="false"
+        android:gravity="center"
+        android:text="%    "
+        android:textColor="#B0DBFF"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+    <TextView
+        style="@style/style_task_entity_nameedit"
+        android:id="@+id/task_nameedit"
+        android:layout_width="0sp"
+        android:layout_height="fill_parent"
+        android:layout_weight="2.25"
+        android:clickable="false"
+        android:focusable="false"
+        android:gravity="center_vertical"
+        android:hint="Task" 
+         android:textColor="#ffffff"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+    <TextView
+        android:id="@+id/your_markedit"
+        android:layout_width="0sp"
+        android:layout_height="fill_parent"
+        android:layout_weight="0.60"
+        android:clickable="false"
+        android:focusable="false"
+        android:gravity="center"
+         android:textColor="#ffffff"
+        android:inputType="numberDecimal" />
+
+    <TextView
+        android:id="@+id/main_gpa"
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:clickable="false"
+        android:focusable="false"
+        android:gravity="center"
+        android:text="/"
+        android:textColor="#B0DBFF"
+        />
+
+     <TextView
+         android:id="@+id/total_edit"
+         android:layout_width="0sp"
+         android:layout_height="fill_parent"
+         android:layout_weight="0.67"
+         android:clickable="false"
+         android:focusable="false"
+         android:gravity="center"
+          android:textColor="#ffffff"
+         android:inputType="numberDecimal" />
+
+</LinearLayout>

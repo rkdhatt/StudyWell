@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/RelativeLayout01" 
+    android:layout_width="match_parent"
+    android:orientation="horizontal"
+    style="@style/style_entity"
+    android:textColor="#ffffff">
+
+    <TextView
+        android:id="@+id/sem_gpaedit"
+        android:layout_width="100sp"
+        android:layout_height="fill_parent"
+        android:layout_alignParentRight="true"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:hint="3.5"
+        android:focusable="false"
+        android:clickable="false"
+         android:textColor="#ffffff"
+        android:inputType="numberDecimal" />
+
+    <TextView
+        android:id="@+id/sem_nameedit"
+        style="@style/style_sem_entity_nameedit"
+        android:layout_width="100sp"
+        android:layout_height="fill_parent"
+        android:layout_alignBaseline="@+id/sem_gpaedit"
+        android:layout_alignBottom="@+id/sem_gpaedit"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="10dp"
+        android:layout_toLeftOf="@+id/sem_gpaedit"
+        android:layout_weight="1"
+        android:clickable="false"
+        android:focusable="false"
+         android:textColor="#ffffff"
+        android:gravity="center_vertical"
+        android:hint="Task"
+        />
+    
+</RelativeLayout>

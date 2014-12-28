@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="right" >
+
+    <TextView
+        style="@style/updateHeaderText"
+        android:id="@+id/textviewtask_dialog"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:gravity="left"
+        android:text="Add a new task"
+        android:textColor="#0058A1"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        />
+    
+    <TextView
+        android:id="@+id/viewdiagonal_dialog"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/average_dialog"
+        android:layout_alignBottom="@+id/average_dialog"
+        android:layout_centerHorizontal="true"
+        android:text="/"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/total_dialog"
+        android:layout_width="100sp"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/average_dialog"
+        android:layout_alignParentRight="true"
+        android:layout_toRightOf="@+id/viewdiagonal_dialog"
+        android:ems="10"
+        android:hint="Total*"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:inputType="numberDecimal" />
+
+    <EditText
+        android:id="@+id/average_dialog"
+        android:layout_width="100sp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/taskname_dialog"
+        android:layout_marginTop="33dp"
+        android:layout_toLeftOf="@+id/viewdiagonal_dialog"
+        android:ems="10"
+        android:gravity="left"
+        android:hint="Your mark*"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:inputType="numberDecimal"
+        />
+
+    <EditText
+        android:id="@+id/weight_dialog"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/total_dialog"
+        android:layout_marginTop="21dp"
+        android:ems="50"
+        android:gravity="center"
+        android:hint="Weight of Task (%)*"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:inputType="numberDecimal" >
+
+        <requestFocus />
+    </EditText>
+
+    <TextView
+        android:id="@+id/viewdiagonal_required"
+        android:layout_width="fill_parent"
+        android:layout_height="20dp"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/textviewtask_dialog"
+        android:text="Fields marked with * are required."
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+    <EditText
+        android:id="@+id/taskname_dialog"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/viewdiagonal_required"
+        android:layout_marginTop="26dp"
+        android:ems="10"
+        android:hint="Task name*"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+</RelativeLayout> 

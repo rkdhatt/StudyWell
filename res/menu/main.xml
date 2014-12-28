@@ -1,0 +1,9 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+     xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:id="@+id/create_sem_menu"
+        android:title="Create a Task"
+        android:icon="@drawable/ic_action_collections_collection"
+        android:orderInCategory="0"
+        />
+
+</menu>
