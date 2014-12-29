@@ -4,6 +4,12 @@ import java.util.List;
 
 import view.MainActivity;
 
+import com.calc.gpacalculator.R;
+import com.calc.gpacalculator.R.id;
+import com.calc.gpacalculator.R.layout;
+import com.calc.gpacalculator.R.menu;
+
+
 import controller.Course_ListAdapter;
 import controller.Semester_ListAdapter;
 import android.app.Activity;

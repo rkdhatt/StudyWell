@@ -144,7 +144,7 @@ public class CourseDataSource {
 
 		List<Course> course_list = new ArrayList<Course>();
 
-		String query = "SELECT c.coursename, c.courseID, c.sem2courseID, c.coursegrade FROM "
+		String query = "SELECT c.coursename, c.courseID, c.sem2courseID, c.coursegrade, c.course_goal FROM "
 				+ MySQLiteHelper.TABLE_SEMESTERS
 				+ " s, "
 				+ MySQLiteHelper.TABLE_COURSES
