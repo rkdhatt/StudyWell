@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="20dp" >
+    
+	    <TextView
+        android:id="@+id/UserPref_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:gravity="left"
+        android:text="User Preferences"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        />
+
+	    <TextView
+        android:id="@+id/UserPref_scale"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/UserPref_title"
+        android:layout_marginTop="10dp"
+        android:gravity="left"
+        android:text="GPA Scale"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        />
+	    
+	    <EditText
+	        android:id="@+id/UserPref_edit_scale"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_alignParentLeft="true"
+	        android:layout_alignParentRight="true"
+	        android:layout_below="@+id/UserPref_scale"
+	        android:layout_marginTop="5dp"
+	        android:ems="8"
+	        android:hint="Enter a GPA scale (4, 9, etc.)" >
+	
+	        <requestFocus />
+	    </EditText>
+	    
+	    <TextView
+        android:id="@+id/UserPref_levels"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/UserPref_edit_scale"
+        android:layout_marginTop="20dp"
+        android:gravity="left"
+        android:text="GPA Levels"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        />
+	    
+	    <EditText
+	        android:id="@+id/UserPref_edit_levels"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_alignParentLeft="true"
+	        android:layout_alignParentRight="true"
+	        android:layout_below="@+id/UserPref_levels"
+	        android:layout_marginTop="5dp"
+	        android:ems="8"
+	        android:hint="Percent to GPA" >
+	        <requestFocus />
+	    </EditText>
+	    
+    
+    
+</RelativeLayout>
