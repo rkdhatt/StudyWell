@@ -5,12 +5,29 @@ public class Semester {
 	private String name;
 	private float mark_value;
 	private int sID;
+	private float semgoal_gpa;
 	
-	public Semester(String name, int sID, float marks) {
+	/*
+	 * add goal gpa
+	 * 
+	 * 
+	 * 
+	 */
+	
+	public Semester(String name, int sID, float marks, float goal) {
 		this.name = name;
 		this.sID = sID;
 		this.mark_value = marks;
+		this.semgoal_gpa = goal;
 		
+	}
+
+	public float getSemgoal_gpa() {
+		return semgoal_gpa;
+	}
+
+	public void setSemgoal_gpa(float semgoal_gpa) {
+		this.semgoal_gpa = semgoal_gpa;
 	}
 
 	public String getName() {

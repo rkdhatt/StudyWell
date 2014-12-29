@@ -115,7 +115,7 @@ public class CourseActivity extends Activity {
 									cID = cds.getNewID();
 
 									cds.createCourse(cID, course_name, s2c_ID,
-											0);
+											0,0);
 								} else {
 									showInValidInputMessage();
 								}
