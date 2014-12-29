@@ -38,7 +38,8 @@ public class CourseDataSource {
 	private String[] allColumns = { MySQLiteHelper.COLUMN_COURSE_NAME,
 			MySQLiteHelper.COLUMN_COURSE_ID,
 			MySQLiteHelper.COLUMN_SEM2COURSE_ID,
-			MySQLiteHelper.COLUMN_COURSE_GRADE };
+			MySQLiteHelper.COLUMN_COURSE_GRADE,
+			MySQLiteHelper.COLUMN_COURSE_GOAL};
 
 	public CourseDataSource(Context context) {
 		dbHelper = new MySQLiteHelper(context);
@@ -52,12 +53,13 @@ public class CourseDataSource {
 		dbHelper.close();
 	}
 
-	public Course createCourse(int ID, String cName, int s2c_ID, float marks) {
+	public Course createCourse(int ID, String cName, int s2c_ID, float marks, float goal) {
 		ContentValues values = new ContentValues();
 		values.put(MySQLiteHelper.COLUMN_COURSE_NAME, cName);
 		values.put(MySQLiteHelper.COLUMN_COURSE_ID, ID);
 		values.put(MySQLiteHelper.COLUMN_SEM2COURSE_ID, s2c_ID);
 		values.put(MySQLiteHelper.COLUMN_COURSE_GRADE, marks);
+		values.put(MySQLiteHelper.COLUMN_COURSE_GOAL, goal);
 
 		long insertId = database.insert(MySQLiteHelper.TABLE_COURSES, null,
 				values);
@@ -67,7 +69,7 @@ public class CourseDataSource {
 		
 		if(cursor == null){
 			cursor.close();
-			Course noData = new Course("", 0, getNewID(), -1);
+			Course noData = new Course("", 0, getNewID(), -1,0);
 			return noData;
 			
 		}
@@ -81,11 +83,13 @@ public class CourseDataSource {
 	}
 
 	private Course cursorToCourse(Cursor cursor) {
-		Course course = new Course("", 0, 0, 0);
+		Course course = new Course("", 0, 0, 0,0);
 		course.setName(cursor.getString(0));
 		course.setID(cursor.getInt(1));
 		course.setSem2course(cursor.getInt(2));
 		course.setMark(cursor.getFloat(3));
+		course.setCoursegoal_gpa(cursor.getFloat(4));
+		
 
 		return course;
 	}

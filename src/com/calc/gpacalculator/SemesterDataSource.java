@@ -16,7 +16,9 @@ public class SemesterDataSource {
 	private SQLiteDatabase database;
 	private MySQLiteHelper dbHelper;
 	private String[] allColumns = { MySQLiteHelper.COLUMN_SEM_NAME,
-			MySQLiteHelper.COLUMN_SEM_ID, MySQLiteHelper.COLUMN_SEM_GRADE };
+									MySQLiteHelper.COLUMN_SEM_ID, 
+									MySQLiteHelper.COLUMN_SEM_GRADE,
+									MySQLiteHelper.COLUMN_SEM_GOAL};
 
 	public SemesterDataSource(Context context) {
 		dbHelper = new MySQLiteHelper(context);
@@ -30,11 +32,12 @@ public class SemesterDataSource {
 		dbHelper.close();
 	}
 
-	public Semester createSemester(String sName, int sID, float marks) {
+	public Semester createSemester(String sName, int sID, float marks, float goal) {
 		ContentValues values = new ContentValues();
 		values.put(MySQLiteHelper.COLUMN_SEM_NAME, sName);
 		values.put(MySQLiteHelper.COLUMN_SEM_ID, sID);
 		values.put(MySQLiteHelper.COLUMN_SEM_GRADE, marks);
+		values.put(MySQLiteHelper.COLUMN_SEM_GOAL, goal);
 
 		long insertId = database.insert(MySQLiteHelper.TABLE_SEMESTERS, null,
 				values);
@@ -48,10 +51,11 @@ public class SemesterDataSource {
 	}
 
 	private Semester cursorToSemester(Cursor cursor) {
-		Semester semester = new Semester("", 0, 0);
+		Semester semester = new Semester("", 0, 0, 0);
 		semester.setName(cursor.getString(0));
 		semester.setID(cursor.getInt(1));
 		semester.setMark_value(cursor.getFloat(2));
+		semester.setSemgoal_gpa(cursor.getFloat(3));
 
 		return semester;
 	}

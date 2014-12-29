@@ -23,6 +23,7 @@ public class MySQLiteHelper extends SQLiteOpenHelper {
 	   public static final String COLUMN_COURSE_ID = "courseID";
 	   public static final String COLUMN_SEM2COURSE_ID = "sem2courseID";
 	   public static final String COLUMN_COURSE_GRADE = "coursegrade";
+	   public static final String COLUMN_COURSE_GOAL = "course_goal";
 	   
 	   
 	   
@@ -30,6 +31,7 @@ public class MySQLiteHelper extends SQLiteOpenHelper {
 	   public static final String COLUMN_SEM_NAME = "semestername";
 	   public static final String COLUMN_SEM_ID = "semesterID";
 	   public static final String COLUMN_SEM_GRADE = "semestergrade";
+	   public static final String COLUMN_SEM_GOAL = "semester_goal";
 	   
 
 	   private static final String DATABASE_NAME = "tasks.db";
@@ -53,14 +55,16 @@ public class MySQLiteHelper extends SQLiteOpenHelper {
 			  + COLUMN_COURSE_ID + " integer primary key autoincrement, "
 			  + COLUMN_COURSE_NAME + " TEXT,"
 			  + COLUMN_SEM2COURSE_ID + " INTEGER,"
-			  + COLUMN_COURSE_GRADE + " FLOAT"
+			  + COLUMN_COURSE_GRADE + " FLOAT,"
+			  + COLUMN_COURSE_GOAL + " FLOAT"
 			  + ")";
 	  
 	  private static final String DATABASE_CREATE_SEMESTERS =
 			  "create table " + TABLE_SEMESTERS + "("
 			  + COLUMN_SEM_ID + " integer primary key autoincrement, "
 			  + COLUMN_SEM_NAME + " TEXT,"
-			  + COLUMN_SEM_GRADE + " FLOAT"
+			  + COLUMN_SEM_GRADE + " FLOAT,"
+			  + COLUMN_SEM_GOAL + " FLOAT" 
 			  + ")";
 	  
 	  
