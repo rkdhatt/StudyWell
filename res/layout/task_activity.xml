@@ -17,24 +17,16 @@
           android:layout_marginTop="5sp">
 
           <TextView
-              android:id="@+id/textViewWeight"
+              android:id="@+id/textViewTaskName"
               android:layout_width="wrap_content"
               android:layout_height="wrap_content"
               android:layout_alignParentLeft="true"
               android:layout_alignParentTop="true"
               android:layout_weight="0.02"
-              android:text="Weight"
+              android:text="Task name"
               android:textColor="#ffffff"
               android:textAppearance="?android:attr/textAppearanceSmall" />
 
-          <TextView
-              android:id="@+id/textViewTaskName"
-              android:layout_width="wrap_content"
-              android:layout_height="wrap_content"
-              android:layout_weight="0.16"
-              android:text="Task name"
-               android:textColor="#ffffff"
-              android:textAppearance="?android:attr/textAppearanceSmall" />
 
           <TextView
               android:id="@+id/textViewMark"
@@ -50,12 +42,22 @@
               android:id="@+id/textViewTotal"
               android:layout_width="wrap_content"
               android:layout_height="wrap_content"
-              android:layout_alignParentLeft="true"
-              android:layout_alignParentTop="true"
-              android:layout_weight="0.02"
+              android:layout_marginRight="10dp"
+              android:layout_toLeftOf="@+id/textViewWeight"
+              android:layout_weight="0.00"
               android:text="Total"
-               android:textColor="#ffffff"
-              android:textAppearance="?android:attr/textAppearanceSmall" />
+              android:textAppearance="?android:attr/textAppearanceSmall"
+              android:textColor="#ffffff" />
+          
+          <TextView
+              android:id="@+id/textViewWeight"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_alignParentRight="true"
+              android:layout_marginRight="10dp"
+              android:text="Weight"
+              android:textAppearance="?android:attr/textAppearanceSmall"
+              android:textColor="#ffffff" />
 
       </LinearLayout>
 	    

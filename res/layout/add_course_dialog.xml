@@ -25,11 +25,26 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentRight="true"
         android:layout_below="@+id/textviewcourse_dialog"
-        android:layout_marginTop="52dp"
+        android:layout_marginTop="10dp"
         android:ems="8"
         android:hint="Course name" >
 
         <requestFocus />
     </EditText>
+    
+    <EditText
+        android:id="@+id/course_goal_dialog"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/coursename_dialog"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="15dp"
+        android:ems="8"
+        android:hint="Course goal (%)" >
 
+        <requestFocus />
+	</EditText>
+	
 </RelativeLayout> 
