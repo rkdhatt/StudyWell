@@ -110,7 +110,7 @@ public class SemesterActivity extends ActionBarActivity {
 									Log.d("onclick", "checking new id of sem "
 											+ Integer.toString(sID));
 
-									sds.createSemester(semester_name, sID, 0);
+									sds.createSemester(semester_name, sID, 0,0);
 
 									sds.close();
 

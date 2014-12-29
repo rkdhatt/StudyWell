@@ -8,17 +8,33 @@ public class Course {
 	private float mark_value;
 	private int ID;
 	private int sem2course;
+	private float coursegoal_gpa; 
 	
-	
+	/*
+	 * add weight for future
+	 * add goal gpa
+	 * 
+	 */
 	
 
 
-	public Course(String name, float mark_value, int cID, int s2c){
+	public Course(String name, float mark_value, int cID, int s2c, float goal){
 		this.name = name;
 		this.mark_value = mark_value;
 		this.ID = cID;
 		this.sem2course = s2c;
+		this.coursegoal_gpa = goal;
 		
+	}
+
+
+
+	public float getCoursegoal_gpa() {
+		return coursegoal_gpa;
+	}
+
+	public void setCoursegoal_gpa(float coursegoal_gpa) {
+		this.coursegoal_gpa = coursegoal_gpa;
 	}
 
 	public int getSem2course() {
