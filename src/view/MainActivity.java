@@ -83,8 +83,9 @@ public class MainActivity extends ActionBarActivity {
 		actionBar.setDisplayUseLogoEnabled(false);
 		actionBar.hide();
 		
-
-		this.deleteDatabase("tasks.db");
+		// Uncomment this line to clear the Local DB everytime you land on Main
+		//this.deleteDatabase("tasks.db");
+		
 		tds = new TaskDataSource(this);
 
 		folder = (ImageButton) findViewById(R.id.cute_folder_main);
