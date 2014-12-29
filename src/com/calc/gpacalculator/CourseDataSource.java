@@ -83,12 +83,16 @@ public class CourseDataSource {
 	}
 
 	private Course cursorToCourse(Cursor cursor) {
-		Course course = new Course("", 0, 0, 0,0);
+		
+		//selectAll();
+		
+		Course course = new Course("", 0, 0, 0, 0);
 		course.setName(cursor.getString(0));
-		course.setID(cursor.getInt(1));
-		course.setSem2course(cursor.getInt(2));
-		course.setMark(cursor.getFloat(3));
-		course.setCoursegoal_gpa(cursor.getFloat(4));
+		course.setMark(cursor.getFloat(1));
+		course.setID(cursor.getInt(2));
+		course.setSem2course(cursor.getInt(3));
+	//	Log.d("coursegoal", Float.toString(cursor.getFloat(4)));
+		//course.setCoursegoal_gpa(cursor.getFloat(4));
 		
 
 		return course;
@@ -155,7 +159,7 @@ public class CourseDataSource {
 				+ "s."
 				+ MySQLiteHelper.COLUMN_SEM_ID + " = " + semID;
 
-		Log.d("database", "QUERY = " + query);
+		//Log.d("database", "QUERY = " + query);
 
 		Cursor cursor = database.rawQuery(query, null);
 
@@ -414,11 +418,21 @@ public class CourseDataSource {
 		int SID_from_CID = cursor.getInt(0);
 		
 		return SID_from_CID;
+
+	}
+
+	public void selectAll(){
 		
+		String query = "SELECT * FROM " + MySQLiteHelper.TABLE_COURSES;
+		Cursor cursor = database.rawQuery(query, null);
+		cursor.moveToFirst();
+		Log.d("coursegoal", Integer.toString(cursor.getColumnIndex(MySQLiteHelper.COLUMN_COURSE_GOAL) ));
 		
 		
 		
 	}
+	
+	
 	
 
 }

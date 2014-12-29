@@ -2,6 +2,8 @@ package com.calc.gpacalculator;
 
 import java.util.ArrayList;
 
+import android.util.Log;
+
 public class Course {
 
 	private String name;
@@ -35,6 +37,8 @@ public class Course {
 
 	public void setCoursegoal_gpa(float coursegoal_gpa) {
 		this.coursegoal_gpa = coursegoal_gpa;
+		//Log.d("coursegoal", "inside course" + coursegoal_gpa);
+
 	}
 
 	public int getSem2course() {

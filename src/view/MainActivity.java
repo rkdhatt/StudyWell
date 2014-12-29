@@ -84,7 +84,7 @@ public class MainActivity extends ActionBarActivity {
 		actionBar.hide();
 		
 
-		//this.deleteDatabase("tasks.db");
+		this.deleteDatabase("tasks.db");
 		tds = new TaskDataSource(this);
 
 		folder = (ImageButton) findViewById(R.id.cute_folder_main);
