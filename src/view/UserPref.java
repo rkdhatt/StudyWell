@@ -14,8 +14,6 @@ public class UserPref extends ActionBarActivity {
 	    super.onCreate(savedInstanceState);
 	    setContentView(R.layout.userpref);
 	    
-	    
-	    
 	    // TODO Auto-generated method stub
 	}
 

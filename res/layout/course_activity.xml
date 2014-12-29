@@ -25,20 +25,32 @@
               android:layout_width="wrap_content"
               android:layout_height="wrap_content"
               android:layout_weight="0.06"
+              android:layout_alignParentLeft="true"
               android:text="Course"
                android:textColor="#ffffff"
               android:textAppearance="?android:attr/textAppearanceSmall" />
 
           <TextView
-              android:id="@+id/textViewMark"
-              android:layout_width="wrap_content"
-              android:layout_height="wrap_content"
-              android:layout_alignParentLeft="true"
+              android:id="@+id/textViewPercent"
+              android:layout_width="50dp"
+              android:layout_height="fill_parent"
               android:layout_alignParentTop="true"
-              android:layout_weight="0.01"
+              android:layout_toLeftOf="@+id/textViewMark"
+               android:gravity="center"
               android:text="GPA"
-               android:textColor="#ffffff"
-              android:textAppearance="?android:attr/textAppearanceSmall" />
+              android:textAppearance="?android:attr/textAppearanceSmall"
+              android:textColor="#ffffff" />
+          
+          <TextView
+              android:id="@+id/textViewMark"
+              android:layout_width="50dp"
+              android:layout_height="wrap_content"
+              android:layout_alignParentRight="true"
+              android:layout_marginRight="10dp"
+              android:gravity="center"
+              android:text="%"
+              android:textAppearance="?android:attr/textAppearanceSmall"
+              android:textColor="#ffffff" />
 
       </LinearLayout>
     

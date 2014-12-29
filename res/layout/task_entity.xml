@@ -6,8 +6,82 @@
     android:orientation="horizontal"
     style="@style/style_entity"
     android:textColor="#ffffff">
+    
+     <TextView
+        style="@style/style_task_entity_nameedit"
+        android:id="@+id/task_nameedit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="10dp"
+        android:clickable="false"
+        android:focusable="false"
+        android:gravity="center_vertical"
+         android:layout_weight="1"
+        android:text="Task name" 
+        android:textColor="#ffffff"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+     
+     <TextView
+         android:id="@+id/your_markedit"
+         android:layout_width="50dp"
+         android:layout_height="fill_parent"
+         android:layout_toLeftOf="@+id/main_gpa"
+         android:layout_weight="0.03"
+         android:clickable="false"
+         android:focusable="false"
+         android:gravity="center|right"
+         android:inputType="numberDecimal"
+         android:textColor="#ffffff" />
 
     <TextView
+        android:id="@+id/main_gpa"
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:layout_toLeftOf="@+id/total_edit"
+        android:clickable="false"
+        android:focusable="false"
+        android:gravity="center"
+        android:text=" / "
+        android:textColor="#B0DBFF" />
+
+     <TextView
+         android:id="@+id/total_edit"
+         android:layout_width="50dp"
+         android:layout_height="fill_parent"
+         android:layout_toLeftOf="@+id/task_weightedit"
+         android:layout_weight="0.03"
+         android:clickable="false"
+         android:focusable="false"
+         android:gravity="center|left"
+         android:inputType="numberDecimal"
+         android:textColor="#ffffff" />
+     
+     <TextView
+         android:id="@+id/task_weightedit"
+         android:layout_width="40dp"
+         android:layout_height="fill_parent"
+         android:layout_toLeftOf="@+id/weight_perc"
+         android:clickable="false"
+         android:focusable="false"
+         android:gravity="center|right"
+         android:text="- -"
+         android:textColor="#ffffff" />
+    
+    <TextView
+        android:id="@+id/weight_perc"
+        android:layout_width="15dp"
+        android:layout_height="fill_parent"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="10dp"
+        android:clickable="false"
+        android:focusable="false"
+        android:gravity="center|left"
+        android:text=" %"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textColor="#B0DBFF" />
+
+    <!-- <TextView
         android:id="@+id/task_weightedit"
         android:layout_width="40dp"
         android:layout_height="fill_parent"
@@ -72,6 +146,6 @@
          android:focusable="false"
          android:gravity="center"
           android:textColor="#ffffff"
-         android:inputType="numberDecimal" />
+         android:inputType="numberDecimal" /> -->
 
 </LinearLayout>
