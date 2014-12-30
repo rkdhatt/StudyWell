@@ -37,6 +37,7 @@ public class Course_ListAdapter extends ArrayAdapter<Course> {
 		Course course;
 		TextView name;
 		TextView mark_value;
+		
 	}
 	
 	@Override
@@ -50,6 +51,7 @@ public class Course_ListAdapter extends ArrayAdapter<Course> {
 		
 		holder.name = (TextView)row.findViewById(R.id.course_nameedit);
 		holder.mark_value = (TextView)row.findViewById(R.id.course_markedit);
+	
 		row.setTag(holder);
 		setupItem(holder);
 		return row;

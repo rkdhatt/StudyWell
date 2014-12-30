@@ -34,6 +34,7 @@ public class CourseActivity extends Activity {
 
 	private String course_name;
 	private float course_mark;
+	private float course_goal;
 	private int cID;
 	private int s2c_ID;
 	private Course_ListAdapter adapter;
@@ -88,6 +89,9 @@ public class CourseActivity extends Activity {
 
 		final EditText coursename_edit = (EditText) promptsView
 				.findViewById(R.id.coursename_dialog);
+		
+		final EditText coursegoal_edit = (EditText) promptsView
+				.findViewById(R.id.course_goal_dialog);
 
 		// Create a new AlertDialog
 		AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(
@@ -109,13 +113,16 @@ public class CourseActivity extends Activity {
 								// If a field is left empty show error message
 								// close dialog, otherwise add to DB
 								if (!coursename_edit.getText().toString()
+										.isEmpty() && !coursegoal_edit.getText().toString()
 										.isEmpty()) {
 									course_name = coursename_edit.getText()
 											.toString();
+									course_goal = Float.parseFloat(coursegoal_edit.getText()
+											.toString());
 									cID = cds.getNewID();
 
 									cds.createCourse(cID, course_name, s2c_ID,
-											0,4);
+											0,course_goal);
 								} else {
 									showInValidInputMessage();
 								}
