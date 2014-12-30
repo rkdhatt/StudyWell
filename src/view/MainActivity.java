@@ -84,7 +84,7 @@ public class MainActivity extends ActionBarActivity {
 		actionBar.hide();
 		
 		// Uncomment this line to clear the Local DB everytime you land on Main
-		//this.deleteDatabase("tasks.db");
+		this.deleteDatabase("tasks.db");
 		
 		tds = new TaskDataSource(this);
 
