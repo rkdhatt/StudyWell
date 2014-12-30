@@ -92,7 +92,7 @@ public class CourseDataSource {
 		course.setID(cursor.getInt(2));
 		course.setSem2course(cursor.getInt(3));
 	//	Log.d("coursegoal", Float.toString(cursor.getFloat(4)));
-		//course.setCoursegoal_gpa(cursor.getFloat(4));
+		course.setCoursegoal_gpa(cursor.getFloat(4));
 		
 
 		return course;
@@ -125,16 +125,19 @@ public class CourseDataSource {
 
 		int last_courseID;
 		String countQuery = "SELECT "+ MySQLiteHelper.COLUMN_COURSE_ID + " FROM " + MySQLiteHelper.TABLE_COURSES + " ORDER BY "
-				+ MySQLiteHelper.COLUMN_COURSE_ID+ " DESC LIMIT 1";
+				+ MySQLiteHelper.COLUMN_COURSE_ID + " DESC LIMIT 1";
 		Cursor cursor = database.rawQuery(countQuery, null);
+		cursor.moveToFirst();
 		
-		if(cursor.getCount() == 0){
+		Log.d("goalbug", "Last CID " + Integer.toString(cursor.getCount()));
+		
+		if(cursor.getCount() == 0){	
 			return 0;
 		}
 		cursor.moveToFirst();
 		last_courseID = cursor.getInt(0);
 
-		Log.d("newID", Integer.toString(last_courseID));
+		Log.d("goalbug", "New CID " + Integer.toString(last_courseID + 1) );
 		cursor.close();
 		return last_courseID + 1;
 
@@ -144,7 +147,7 @@ public class CourseDataSource {
 
 		List<Course> course_list = new ArrayList<Course>();
 
-		String query = "SELECT c.coursename, c.courseID, c.sem2courseID, c.coursegrade, c.course_goal FROM "
+		String query = "SELECT c.coursename, c.coursegrade, c.courseID, c.sem2courseID, c.course_goal FROM "
 				+ MySQLiteHelper.TABLE_SEMESTERS
 				+ " s, "
 				+ MySQLiteHelper.TABLE_COURSES
@@ -343,22 +346,17 @@ public class CourseDataSource {
 
 		List<Course> cList = new ArrayList<Course>();
 
-
-
 		String query = "SELECT " + MySQLiteHelper.COLUMN_COURSE_NAME + " , "
+				+ MySQLiteHelper.COLUMN_COURSE_GRADE + " , "
 				+ MySQLiteHelper.COLUMN_COURSE_ID + " , "
 				+ MySQLiteHelper.COLUMN_SEM2COURSE_ID + " , "
-				+ MySQLiteHelper.COLUMN_COURSE_GRADE  + " FROM " + MySQLiteHelper.TABLE_COURSES
+				+ MySQLiteHelper.COLUMN_COURSE_GOAL  + " FROM " + MySQLiteHelper.TABLE_COURSES
 				+ " ORDER BY " + MySQLiteHelper.COLUMN_COURSE_ID
 				+ " DESC LIMIT 5 ";
 
 		
 		Cursor cursor = database.rawQuery(query, null);
 
-		Log.d("listmain", "size of cursor " + Integer.toString(cursor.getCount()));
-
-		
-		
 		cursor.moveToFirst();
 		while (!cursor.isAfterLast()) {
 			Course c = cursorToCourse(cursor);
